@@ -1,0 +1,13 @@
+alertmanager:
+  enabled: false
+
+server:
+  ingress:
+    enabled: true
+    ingressClassName: nginx
+    hosts:
+      - prometheus.local
+    tls:
+      - secretName: prometheus-tls
+        hosts:
+          - prometheus.local
