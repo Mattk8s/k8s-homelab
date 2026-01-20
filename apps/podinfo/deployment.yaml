@@ -6,7 +6,7 @@ metadata:
   labels:
     app: podinfo
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: podinfo
@@ -18,9 +18,6 @@ spec:
       containers:
       - name: podinfo
         image: ghcr.io/stefanprodan/podinfo:6.5.4
-        args:
-          - --port=9898
-          - --metrics
         ports:
         - containerPort: 9898
         readinessProbe:
