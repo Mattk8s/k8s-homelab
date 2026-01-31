@@ -14,8 +14,9 @@ This repository contains a fully documented, production‑inspired Kubernetes ho
 
 The goal of this project is to showcase hands‑on Kubernetes expertise suitable for cloud engineering roles, including cluster design, monitoring, troubleshooting, and application lifecycle management.
 
-📁 Repository Structure
-Code
+## 📁 Repository Structure
+
+```text
 k8s-lab/
 ├── apps/
 │   ├── podinfo/
@@ -34,6 +35,8 @@ k8s-lab/
 │   ├── longhorn/
 │   └── README.md
 └── README.md   ← (this file)
+```
+
 This layout mirrors GitOps conventions used in production clusters.
 
 🚀 Cluster Overview
