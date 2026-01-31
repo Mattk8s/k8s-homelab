@@ -1,3 +1,14 @@
+## Control Plane IP Recovery (Jan 2026)
+- I received a new router so my cluster updated the node's IP address.
+During lab testing, the control plane node received a new IP address, causing the API server to become unreachable due to outdated SANs in the apiserver certificate. Recovery steps:
+
+- Updated admin.conf and kube-apiserver.yaml with the new IP
+- Regenerated apiserver certificates using kubeadm
+- Regenerated kubeconfig files (admin, controller-manager, scheduler)
+- Restarted kubelet to reload static pod manifests
+- Validated cluster health and restored kubectl connectivity
+- Applied satic ip address to each node in my router
+
 🌐 Kubernetes Home Lab – Production‑Style Cluster & Monitoring Stack
 This repository contains a fully documented, production‑inspired Kubernetes home lab. It demonstrates real‑world platform engineering practices including GitOps‑style organization, observability, application deployment, storage, and cluster operations.
 
